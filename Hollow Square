@@ -1,0 +1,19 @@
+#hollow square:
+n=int(input())
+for i in range(0,n):                                T.C:O(n**2)
+    for j in range(0,n):
+        if(i==0 or j==0 or i == n-1 or j == n-1):
+            print("*",end=" ")
+    print()
+------------------------------------------------------------
+explaination: 
+here,i loop indicates row
+j loop indicates col
+if condition is used to print *
+else part is used to print the empty space
+end=" " ..> is used to print space instead of going to next line because in python ...>print("*",end=\n)  is the default step that means in python after print("*")by deafault it goes to next line since in runs end=\n by default
+in line 7 print() statement is used to go to next row
+| Code      | Purpose                                      |
+| --------- | -------------------------------------------- |
+| end=" " | Prints stars in the same row                 |
+| print() | Moves to the next row after finishing a line |
