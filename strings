@@ -1,0 +1,89 @@
+1.reverse a string 
+
+***#using slicing operator***
+s=input()
+print(s[::-1])
+
+***#using for loop***
+s=input()
+for i in range(len(s)-1,-1,-1):    #-1 is step for moving back from last index
+  print(s[i],end="")     
+i/p:hello
+o/p:olleh
+  
+-----------------------------------------------------------------------------------------
+2.palindrome
+s=input().lower()
+if(s==s[::-1]):
+    print("True")
+else:
+    print("False")
+i/p: Madam
+o/p:True
+-------------------------------------------------------------------------------------------
+3: Count Vowels & Consonants
+.............
+Input: "programming"
+Output:
+Vowels: 3
+Consonants: 8
+
+.............
+s=input("").lower()
+vowels=0
+consonants=0
+for i in s:
+    if(i=='a' or i=='e' or i=='i' or i=='o' or i=='u'):
+        vowels+=1
+    else:
+        consonants+=1
+print(vowels)
+print(consonants)
+.......................
+      (or)
+.......................
+s = input().lower()
+vowels = 0
+consonants = 0
+for i in s:
+    if i.isalpha():   # check if letter
+        if i in "aeiou":
+            vowels += 1
+        else:
+            consonants += 1
+print("Vowels:", vowels)
+print("Consonants:", consonants)
+-------------------------------------------------------------------------------------
+Q4: Character Frequency
+Input: aabbcc
+Output: {'a': 2, 'b': 2, 'c': 2}
+#program
+s=input()
+d={}
+for i in s:
+    if (i in d):
+        d[i]+=1
+    else:
+        d[i]=1
+print(d)
+......................................................................................
+Q5: Remove Duplicates (Maintain Order)
+i/p:programming
+o/p:progamin
+.................
+#program
+s=input()
+ans=""
+for i in s:
+    if i not in ans:
+        ans+=i
+print(ans)
+....................
+(or)
+....................
+s=input()
+ans=[]
+for i in s:
+  if i not in ans:
+    ans.append(i)
+print("".join(ans))           #list is converted into string by .join() method
