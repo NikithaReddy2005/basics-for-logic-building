@@ -1,0 +1,18 @@
+#Input: "aabbbcde"
+#output: "b"
+s=input()
+d={}
+for i in s:
+    if(i in d):
+        d[i]+=1
+    else:
+        d[i]=1
+max_cnt=0
+ans=""
+for i in s:
+    if d[i] > max_cnt:
+        max_cnt=d[i]
+        ans=i
+print(ans,max_cnt)
+
+        
